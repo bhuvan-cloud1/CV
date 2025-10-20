@@ -1,0 +1,230 @@
+Delivered-To: aab101121@gmail.com
+Received: by 2002:a05:6520:362:b0:273:7db0:1937 with SMTP id f2csp556194lka;
+        Thu, 5 Oct 2023 13:00:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG45+BrV4rcQdXRlhz/5WKVfBMFnGdzhw1wlkpauNH5HLHDmLzpCGjYAUFcn6LnW5RmPkfr
+X-Received: by 2002:a05:6a20:394a:b0:154:e887:f581 with SMTP id r10-20020a056a20394a00b00154e887f581mr6627745pzg.58.1696536017100;
+        Thu, 05 Oct 2023 13:00:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1696536017; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VWjuUviw6UMtoqi7iJAgpVELqSsbZ3iDbhHt+mtVKNaAiQN+qvmKEc61wjHqGj+bdh
+         ZT6TkDnj982Z8jQm4jV77pbfcn3TmhpX4mqQdWJuCcHMSGVzjM+KaLkl8rWz1eQkrW3K
+         ZKncG3zPRmigMglWCHrKsvv6ii2cngUF+TUNlFWXoc7Wly1+a7z0wl/PAhubQFvzNOUG
+         muDylXwVJE/mQ2TLxp6hUpsqxMXkjVm4C1Pb1xuSPnuvqBiPpZOUABg8e3DJcNohHQsi
+         Mu7nx3m/pVgfw2jGz5l09OVxOus5rbyKCXeXYaq1NPn/HV0mPSAs0QC4/S1MEtFzb9jD
+         p1uA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=IoGz5eQxkqPJprmk+NRncPmhjvdUHQY+6QolMLXlg8k=;
+        fh=K85gIMHeUFjSLW9sfqnMBeZ3DO0BAGSNpIJTCmSwLQA=;
+        b=HydSzru29MshwfPsprCElZi77rBrKi5LFc9JK9kIXerHt3VltCyv5vuEuGIochycMp
+         j7GcOx+3ZnTRcGqOaV6JYlqQLqURzqWIDGt1rbbyq3e8L5y8B9qi1IKSPk1VAvfOMi/F
+         bZPi/U2+q9wEYYh1eodfR2Qe6QmcqHIJyxhqWT4s2OBsj8AfTy8t/97eBk5MaEDFuOYv
+         bbrHhH6xzadnotcrlCvZAWgQSzWEa+i8P8vCzoCuEkh6t88MuX6M2l0VsmITh4IKBkxv
+         M3JoI/NyDV8z78lVhe5gMvUkxgFw/9KNTgkb6Ms5rtnfc9rFncei5wDw9g++5JGxtwCY
+         CoUg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@careeralerts.kainos.com header.s=s1 header.b=B47fVEkf;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=deiq0LC2;
+       spf=pass (google.com: domain of bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com designates 149.72.180.42 as permitted sender) smtp.mailfrom="bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=kainos.com
+Return-Path: <bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com>
+Received: from o978.ptr9316.careeralerts.kainos.com (o978.ptr9316.careeralerts.kainos.com. [149.72.180.42])
+        by mx.google.com with ESMTPS id z7-20020a056a001d8700b00666c9148d03si2012803pfw.6.2023.10.05.13.00.16
+        for <aab101121@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 05 Oct 2023 13:00:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com designates 149.72.180.42 as permitted sender) client-ip=149.72.180.42;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@careeralerts.kainos.com header.s=s1 header.b=B47fVEkf;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=deiq0LC2;
+       spf=pass (google.com: domain of bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com designates 149.72.180.42 as permitted sender) smtp.mailfrom="bounces+24411303-55e4-aab101121=gmail.com@em2304.careeralerts.kainos.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=kainos.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=careeralerts.kainos.com;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=s1; bh=IoGz5eQxkqPJprmk+NRncPmhjvdUHQY+6QolMLXlg8k=;
+	b=B47fVEkfO+SV8B6NSIXzHTvo/9IRkQcexGujRckt6Wsir32BC2fQwR9DFSO1z7wYmX8Z
+	i8IiAJ6M0+qza5CNl3lzQja36MQMeB/x8CuVFPggXe6OlmKd5y1H23zV3RZTJFLfHOdryQ
+	gz2o7GNkwj3HFEQ8PrHy3oG8Ki7NFTsrb/JqS8LVoq+fpKBKNh024NAOi3yMOagCMrRszF
+	BCn6fA2ZGzUaJb2aiuDvi3noLMskUgJ2o279CsdW3bIxNatcH6evHbWN+8vJI0xzkkXEMC
+	2LySwBSn8KLSYRVuTnSziIzRFAI6hGVgXruyenhrooYal0cf5HGZRCyfzX87pIsA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=IoGz5eQxkqPJprmk+NRncPmhjvdUHQY+6QolMLXlg8k=;
+	b=deiq0LC2U9B397Kx1vdPq3HfMTLK9eek3DSrtH6hVEmef130JAlUNlWgdlhLgZGCUK+5
+	KCnApuq/jng9zTYB4pYuoZDLJszjdgKHZ4xvRlPjnZPKhCnZVjbeYP95j2G0TqPLBVnux2
+	i2CYzQs+NipPTbbOCeY1p7PBTDpZr+VSk=
+Received: by filterdrecv-8684c58db7-smfsf with SMTP id filterdrecv-8684c58db7-smfsf-1-651F15CF-7
+        2023-10-05 20:00:15.196287938 +0000 UTC m=+12774098.175602502
+Received: from MjQ0MTEzMDM (unknown)
+	by geopod-ismtpd-7 (SG) with HTTP
+	id Q5FceXwBRwqVhonq9KobEQ
+	Thu, 05 Oct 2023 20:00:14.941 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=3132d07d3b3f16723f1eea110a220fdd3ce07f22419462d9a0dfaf884b3f
+Date: Thu, 05 Oct 2023 20:00:15 +0000 (UTC)
+From: Kainos <opportunities@careeralerts.kainos.com>
+Mime-Version: 1.0
+Message-ID: <Q5FceXwBRwqVhonq9KobEQ@geopod-ismtpd-7>
+Subject: See you soon! | Kainos Open Evening
+Reply-To: do-not-reply@careeralerts.kainos.com
+X-Feedback-ID: 24411303:SG
+X-SG-EID: 
+ =?us-ascii?Q?Rnqdq1SAI=2FZDjaOh9aTu+lFo91o1OTkFCGbbekxsEj=2FI=2FW0sBEQvqPB=2FhllhSw?=
+ =?us-ascii?Q?qI63Am48tZc7BCXPt7Ef4PZ9epZP6tSzxrvF2Hz?=
+ =?us-ascii?Q?IIEkwIHVpZ5WSDaoKKiaWh68glNuCuSNTnmAdHY?=
+ =?us-ascii?Q?LogBCH26=2FYnueQvehNwldKKhGxBcn770HqeAbUa?=
+ =?us-ascii?Q?EkaUMbkLur2H2=2FpSpCNHoxQLs6MgAKw2cTtJWpp?=
+ =?us-ascii?Q?AkJnm2G6dKpalX6lQinrG1s5CqbSfuTwYjkOiWy?=
+ =?us-ascii?Q?2vCIMCy86KN4YhwvIO5Hg=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb0vVibVOKZaTtCiNDH9szymq8kf0zVucx6i0MYHuo5?=
+ =?us-ascii?Q?rF0IMOqL1wPug1FOj1MRTFC1FzhxdrhT8uHd2Zm?=
+ =?us-ascii?Q?r+XX=2FfDa0a=2FeVMyHTzNLldkfJndKqZgVpHzjJ1x?=
+ =?us-ascii?Q?Q4ghRv1mIC4+9ocJkbVVGmpKk2V5LLtBtpq7DEe?=
+ =?us-ascii?Q?1ya9A2isSu475tRJ5+3PbQyaJxBodlvGCx=2FZEdX?=
+ =?us-ascii?Q?BCKXguj11WT4+dvyp8qooD9qfz4rXYKKQq2w1Kr?=
+ =?us-ascii?Q?Wfj0QfU7=2FxxRfa=2FXHJIVKjnt=2FRHXwK=2FweSTXfnH?=
+ =?us-ascii?Q?6bTnVfttRDitBazxIKxmFuQy4CITf2QG2oVclgC?=
+ =?us-ascii?Q?=2Fhk52SA=3D=3D?=
+To: aab101121@gmail.com
+X-Entity-ID: 1/hhzY0asH8M9nzKxDDx4w==
+
+--3132d07d3b3f16723f1eea110a220fdd3ce07f22419462d9a0dfaf884b3f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Good afternoon,Thank you for expressing your interest in attending our upco=
+ming Birmingham Open Evening on Tuesday, October 10th.&nbsp;We are delighte=
+d that you are interested in Kainos as a potential employer to kick start y=
+our career!&nbsp;Great news, we can confirm that you have secured a place f=
+or the event.&nbsp;We look forward to welcoming you to our office on Tuesda=
+y 10th Oct (arrive for 5:30pm) for a fun-filled evening to learn more about=
+ life at Kainos. Expect pizza, talks and demos from our industry leading pe=
+ople and chats with our Early Careers Talent Team about our available techn=
+ical and Engineering roles. This event will focus on these disciplines, how=
+ever those with backgrounds in/studying other courses may also attend.Where=
+ to find us:Kainos Birmingham5th Floor, Cornerblock2 Cornwall StreetB3 2DXB=
+irminghamPlease arrive at our office on the 5th floor&nbsp;to get signed in=
+ by the Facilities Team.How to get there:We are just a minute's walk from S=
+now Hill station and easily accessible via public transport. There are a nu=
+mber of multi-storey car parking facilities also within a short walk.If you=
+ are still able to attend, you do not need to respond to this email. Howeve=
+r, if you are no longer interested in/or able to attend, please contact Mol=
+lie at mollie.gutteridge@kainos.com&nbsp;so we can offer your space to anot=
+her student.We look forward to meeting you soon!Kind regards,Early Careers =
+| Talent Acquisition TeamCopyrights 2023, KainosTo ensure delivery to your =
+inbox, please add opportunities@careeralerts.kainos.com to your address boo=
+kYou can unsubscribe here and stop receiving these job alert emails
+--3132d07d3b3f16723f1eea110a220fdd3ce07f22419462d9a0dfaf884b3f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!DOCTYPE html><html><head><title></title></head><body style=3D"background-=
+color:#f0f0f0;margin:0; line-height:150%"><center style=3D"width:100%;"><ta=
+ble cellpadding=3D"0" cellspacing=3D"0"width=3D"100%"><tbody><tr><td style=
+=3D"padding:20px;background-color:#f0f0f0;font-family:sans-serif;"><table c=
+ellpadding=3D'0' cellspacing=3D'0' width=3D'580' bgcolor=3D'#FFFFFF' align=
+=3D'center'  data-widget-id=3D'39tis1nyozx' data-uiwidget-type=3D'DEFAULT_U=
+I_TYPE' class=3D' widget_page_layout_widget widget_39tis1nyozx' style=3D'ba=
+ckground-color:#FFFFFF;margin:0 auto;width:580;'><tbody><tr><td style=3D'pa=
+dding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;backgro=
+und-color:#ffffff;' align=3D'left' ><div data-widget-id=3D'ij742vj5rs8' dat=
+a-uiwidget-type=3D'HEADER_WIDGET' class=3D' widget_container_widget widget_=
+ij742vj5rs8' style=3D''><img src=3D'https://static.imomentous.co/CareerConn=
+ectResources/TemplateImages/KAINGB/header1_1_1636627681617.jpg' width=3D'56=
+0' height=3D'auto' alt=3D'Banner Image' data-widget-id=3D'p14uu0lhrzl' data=
+-uiwidget-type=3D'DEFAULT_UI_TYPE' class=3D' widget_image_widget widget_p14=
+uu0lhrzl' style=3D''/></div></td></tr><tr><td style=3D'padding-top:5px;padd=
+ing-bottom:5px;padding-left:20px;padding-right:20px;background-color:#FFFFF=
+F;' align=3D'left' ><div data-widget-id=3D'vz89i1scqrm' data-uiwidget-type=
+=3D'TEXT_WIDGET' class=3D' widget_container_widget widget_vz89i1scqrm' styl=
+e=3D''><div data-widget-id=3D'3slvlgwjgnx' data-uiwidget-type=3D'DEFAULT_UI=
+_TYPE' class=3D' widget_text_widget widget_3slvlgwjgnx' style=3D'margin-top=
+:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-size:16px;colo=
+r:#4b6479;font-family:Arial;letter-spacing:normal;line-height:150%;'><div>G=
+ood afternoon,</div><div><br></div><div>Thank you for expressing your inter=
+est in attending our upcoming Birmingham Open Evening on Tuesday, October 1=
+0th.&nbsp;We are delighted that you are interested in Kainos as a potential=
+ employer to kick start your career!&nbsp;</div><div><br></div><div><strong=
+>Great news, we can confirm that you have secured a place for the event.&nb=
+sp;</strong></div><div><br></div><div>We look forward to welcoming you to o=
+ur office on <strong>Tuesday 10th Oct (arrive for 5:30pm)</strong> for a fu=
+n-filled evening to learn more about life at Kainos. Expect pizza, talks an=
+d demos from our industry leading people and chats with our Early Careers T=
+alent Team about our available technical and Engineering roles. This event =
+will focus on these disciplines, however those with backgrounds in/studying=
+ other courses may also attend.</div><div><br></div><div><strong>Where to f=
+ind us:</strong></div><div>Kainos Birmingham</div><div>5th Floor, Cornerblo=
+ck</div><div>2 Cornwall Street</div><div>B3 2DX</div><div>Birmingham</div><=
+div><br></div><div>Please arrive at our office on the <b>5th floor</b>&nbsp=
+;to get signed in by the Facilities Team.</div><div><br></div><div><strong>=
+How to get there:</strong></div><div>We are just a minute's walk from Snow =
+Hill station and easily accessible via public transport. There are a number=
+ of multi-storey car parking facilities also within a short walk.</div><div=
+><br></div><div>If you are still able to attend, <u>you do not need to resp=
+ond to this email.</u> However, if you are no longer interested in/or able =
+to attend, <u>please contact Mollie at mollie.gutteridge@kainos.com&nbsp;</=
+u>so we can offer your space to another student.</div><div><br></div><div>W=
+e look forward to meeting you soon!</div><div><br></div><div><strong>Kind r=
+egards,</strong></div><div><strong>Early Careers | Talent Acquisition Team<=
+/strong></div></div></div></td></tr><tr><td style=3D'padding-top:10px;paddi=
+ng-bottom:10px;padding-left:20px;padding-right:10px;background-color:#28358=
+3;' align=3D'left' ><div data-widget-id=3D'd24v5ci1sct' data-uiwidget-type=
+=3D'FOOTER_WIDGET' class=3D' widget_container_widget widget_d24v5ci1sct' st=
+yle=3D'color:#B2B2B2;'><div data-widget-id=3D'tf8ip87utk' data-uiwidget-typ=
+e=3D'DEFAULT_UI_TYPE' class=3D' widget_text_widget widget_tf8ip87utk' style=
+=3D'margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-=
+size:14px;color:#F8F8F8;font-family:Arial;letter-spacing:normal;padding-bot=
+tom:2px;display:block;line-height:150%;'><div>Copyrights 2023, Kainos</div>=
+</div><div data-widget-id=3D'bw24j2v5gt' data-uiwidget-type=3D'DEFAULT_UI_T=
+YPE' class=3D' widget_text_widget widget_bw24j2v5gt' style=3D'margin-top:0p=
+x;margin-right:0px;margin-bottom:0px;margin-left:0px;font-size:12px;color:#=
+FFF;font-family:Arial, Helvetica, sans-serif;letter-spacing:normal;padding-=
+bottom:2px;display:block;line-height:150%;'><div><span style=3D"font-family=
+:Arial,Helvetica,sans-serif;"><span style=3D"font-size:12px;"><span style=
+=3D"color:#ffffff;">To ensure delivery to your inbox, please add <a href=3D=
+'mailto:opportunities@careeralerts.kainos.com' target=3D'_blank' style=3D'c=
+olor:inherit;font-family:inherit;font-size:inherit;background-color:inherit=
+;'><span style=3D'color:inherit'>opportunities@careeralerts.kainos.com</spa=
+n></a> to your address book</span></span></span></div></div><div data-widge=
+t-id=3D'q1av4lue1ga' data-uiwidget-type=3D'DEFAULT_UI_TYPE' class=3D' widge=
+t_text_widget widget_q1av4lue1ga' style=3D'margin-top:0px;margin-right:0px;=
+margin-bottom:0px;margin-left:0px;font-size:12px;color:#FFF;font-family:Ari=
+al, Helvetica, sans-serif;letter-spacing:normal;display:block;line-height:1=
+50%;'><div><span style=3D"font-size:12px;"><span style=3D"font-family:Arial=
+,Helvetica,sans-serif;"><span style=3D"color:#ffffff;">You can <a href=3D'h=
+ttps://u24411303.ct.sendgrid.net/ls/click?upn=3DifzfVZgtocRTaMgkJY-2BU1OsK-=
+2BISJf53Fask-2BuDUbJjTtzlo7mGSeBFXHCIubDM1VAVTJSNX3iQOog32pdPlSDtDxLCeH09LH=
+lV5Jj3ZmI3TUlqS3gKjxwAZrEQvQ6sIUrwlpjxMKWLI2-2BpDkEdBsttiYustGaBREmca8Ycvyz=
+-2FUiXOA40dm9RQFeT6-2BI5yrnbd9XHKyTwCl4UoPgfQoAXUyH6Nrk-2Bg3okEmh-2Bh2hRo7u=
+fGyeKxm4fBCKiw6TGYXlOygBgBMvNSUatk7BD7clNGFBPNKsmB5mdxrx-2BQAnqiSMsJEUqoB48=
+PhVygKiF8PdG18Tz1Senvakudz4-2Bw-2FAg-2FFEImqJzQmiGLwei1jsafI-3DiPx6_d-2Bnnh=
+K273JabCzoVSXQq-2FfWHLxIwphOY2SorsORoLG5-2BX8AtpmSbqVfYk7a57Gb6aVNlG-2Fir-2=
+BoXygW8Iz7-2BsQbcH0Y-2BwYHXYv2FrziqXzehIpb-2FXuLsBbvLzs0JK7EHCcdeo4yCtriAmI=
+-2BbJDiLRM-2BIbz99hpWGBhpKjhGmlCB2yGgthE-2FpeW-2B85a7ZbxWKflonRBzjRSQq24vlV=
+gtnodLj-2FNT109NuDZODTIka5ZZ18U-2FxejpTvLjy9-2FLZIjZFFbbLYu2kWBHyHchbpUX3fK=
+gGvzsE80vBazatOKrtM0hI2B1dEaFHOSAOXxidEEo6fG5VRfsTQVGhIej8z9GbN4xv5-2BJXkBS=
+cd4X7BDDEIbyGy7yLiuinxtFCu-2Bm20fdRab1tg8fLjm84bySgivhrI0aS-2FC7f6Vq04eu-2F=
+RU8Ppxm4spfKmieWvj5pTx1-2Bm59tVm7sZKf45HMN95likYvdhpOAzvW8rI19IMMxN2WWExWmi=
+7XXMFCjiaR-2FWRgfCujWd' style=3D'color:inherit;font-family:inherit;font-siz=
+e:inherit;background-color:inherit;'><span style=3D'color:inherit'>unsubscr=
+ibe</span></a> here and stop receiving these job alert emails</span></span>=
+</span></div></div></div></td></tr></tbody></table></td></tr></tbody></tabl=
+e></center><img src=3D"https://u24411303.ct.sendgrid.net/wf/open?upn=3DQgp0=
+H84l0KutKqJ6WGX6y4bR5rB8Z5roIL6zEZZA4mzcn0K4oGZl-2FcTpG5198n14GrL20yws-2BHQ=
+9vg-2Bf2SW5K32QPKFPU6s1I0bPu8gtx8eJXTR3bfkz7JUb8aUsz62euAyxY-2BNFqZy-2FT-2B=
+Kq3fTSzIQC4u59iZwvPuIPoLPmT0xQe3i5njolrIH-2F3eSm3aRNmG3r3obwW1-2FP8-2F68bpl=
+7cwltDss9iYOjQw1rpATVqp5tbaVs4Zuf9ZsA9A5rSOdpOrsl81dk7A0tN-2BedL-2BMbnj4Iso=
+utt-2BrmqTNUW5iTUb8P2QFLVIyk6CmFvFuZxOsUPguq-2FUlztN4x90zUDa6L6Kss3ea91eif-=
+2F0TLCpg1tGSzo8dKD-2FNTjsZLHsbO2n1MuMvhLtkZAjBXhgSGiIsdSuznx8KqSwstx52zdanO=
+Y-2BfO3luAEdPqBtUDnMpoDGxdRXsGp01j5FsezAJmpssQnnWp1sKDXHimTPtLmX-2FM4cP10UV=
+Dl9ej5yq53dhLK4gV" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;margin=
+-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;marg=
+in-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;p=
+adding-right:0 !important;padding-left:0 !important;"/></body></html>
+--3132d07d3b3f16723f1eea110a220fdd3ce07f22419462d9a0dfaf884b3f--
